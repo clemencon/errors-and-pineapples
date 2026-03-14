@@ -1,0 +1,32 @@
+{
+	"name": "errors-and-pineapples",
+	"version": "1.0.0",
+	"description": "A kata on error handling based on the book 'A Philosophy of Software Design' by John Ousterhout.",
+	"homepage": "https://github.com/clemencon/errors-and-pineapples#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/clemencon/errors-and-pineapples.git"
+	},
+	"license": "MIT",
+	"author": "Julien Clémençon",
+	"type": "module",
+	"main": "src/app.ts",
+	"scripts": {
+		"check": "biome check && tsc --project tsconfig.test.json && vitest run",
+		"fix": "biome check --write .",
+		"test": "vitest",
+		"typecheck": "tsc --project tsconfig.test.json"
+	},
+	"engines": {
+		"node": ">=24.14.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.6",
+		"@types/node": "25.4.0",
+		"typescript": "5.9.3",
+		"vitest": "4.0.18"
+	},
+	"dependencies": {
+		"dedent": "1.7.2"
+	}
+}

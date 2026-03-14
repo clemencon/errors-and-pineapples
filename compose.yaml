@@ -1,0 +1,10 @@
+services:
+  kata:
+    build: .
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    tty: true
+
+volumes:
+  node_modules:

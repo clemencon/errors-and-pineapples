@@ -1,0 +1,8 @@
+ignoredBuiltDependencies:
+  - esbuild
+
+minimumReleaseAge: 4320
+
+preferFrozenLockfile: true
+
+savePrefix: ''
