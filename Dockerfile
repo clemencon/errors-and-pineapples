@@ -14,5 +14,9 @@ RUN pnpm install --frozen-lockfile
 # Copy project files.
 COPY . .
 
+# Install dependencies into the bind-mounted volume on startup so the
+# host IDE can resolve types from node_modules.
+ENTRYPOINT ["sh", "-c", "pnpm install --frozen-lockfile && exec \"$@\"", "--"]
+
 # Default: run the test watcher.
 CMD ["pnpm", "run", "test"]
